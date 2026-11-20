@@ -1,0 +1,430 @@
+<!DOCTYPE html> <!-- Memberi tahu browser (Chrome/Safari) bahwa ini adalah file halaman website -->
+<html lang="id"> <!-- Pembuka seluruh isi website dengan bahasa utama Bahasa Indonesia -->
+<head> <!-- Bagian "otak" website (pengaturan di balik layar, tidak tampil langsung di halaman) -->
+    <meta charset="UTF-8"> <!-- Agar semua huruf, tanda baca, dan emoji (🎬🏃‍♀️🏊‍♀️) muncul normal tanpa rusak -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Agar tampilan website otomatis rapi saat dibuka di layar HP maupun laptop -->
+    <title>Andhara Dila Manggala Putri | Profil</title> <!-- Tulisan judul yang muncul di bagian tab paling atas browser -->
+    <!-- Mengambil 2 gaya tulisan cantik dari internet (Google) agar tulisan tidak terlihat kaku -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style> /* Mulai bagian "rias wajah" website (mengatur warna, ukuran, jarak, dan posisi) */
+        html {
+            scroll-behavior: smooth; /* Membuat layar meluncur halus ke bawah saat tombol menu diklik (tidak langsung loncat) */
+        }
+
+        body {
+            font-family: 'Lato', sans-serif; /* Mengatur jenis huruf standar untuk seluruh tulisan di halaman */
+            margin: 0; /* Menghilangkan ruang kosong di pinggir luar layar */
+            padding: 0; /* Menghilangkan ruang kosong di bagian dalam layar */
+            background-color: #f9f8f6; /* Mewarnai latar belakang halaman menjadi krem lembut */
+            color: #2d3748; /* Mewarnai tulisan menjadi abu-abu gelap agar nyaman dibaca mata */
+            line-height: 1.6; /* Mengatur jarak renggang antar baris tulisan agar tidak berdempetan */
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif; /* Mengubah gaya tulisan khusus untuk judul-judul dan nama logo agar terlihat klasik & elegan */
+        }
+
+        /* Pengaturan Menu Bagian Atas */
+        nav {
+            position: sticky; /* Membuat menu atas tetap menempel di layar meskipun halaman digeser ke bawah */
+            top: 0; /* Posisi menempelnya pas di ujung paling atas layar */
+            background-color: rgba(249, 248, 246, 0.95); /* Warna latar menu krem agak tembus pandang */
+            backdrop-filter: blur(5px); /* Memberi efek kaca buram di belakang menu saat digeser */
+            display: flex; /* Menyusun nama logo dan tombol menu agar berjejer ke samping (kiri dan kanan) */
+            justify-content: space-between; /* Mendorong logo mentok ke kiri dan tombol menu mentok ke kanan */
+            align-items: center; /* Meluruskan posisi logo dan tombol menu agar sejajar rapi di tengah */
+            padding: 25px 50px; /* Memberi ruang napas di dalam kotak menu (atas-bawah dan kiri-kanan) */
+            border-bottom: 1px solid #e2e8f0; /* Memberi garis tipis sebagai pembatas di bawah menu */
+            z-index: 1000; /* Memastikan menu selalu berada di lapisan paling atas (tidak tertimpa foto atau tulisan lain) */
+        }
+
+        .logo {
+            font-size: 1.3rem; /* Mengatur ukuran tulisan logo "Andhara." */
+            font-weight: 700; /* Menebalkan tulisan logo */
+            letter-spacing: 2px; /* Memberi jarak renggang antar huruf pada logo */
+            color: #1a202c; /* Warna tulisan logo hitam keabu-abuan */
+        }
+
+        .nav-links a {
+            margin-left: 30px; /* Memberi jarak antar tombol menu (Biodata, Hobi, Gambar) */
+            text-decoration: none; /* Menghilangkan garis bawah bawaan pada tulisan yang bisa diklik */
+            color: #718096; /* Warna tulisan tombol menu abu-abu */
+            font-size: 0.75rem; /* Ukuran tulisan tombol menu */
+            font-weight: 700; /* Menebalkan tulisan tombol menu */
+            letter-spacing: 2px; /* Merenggangkan jarak antar huruf */
+            text-transform: uppercase; /* Memaksa semua huruf otomatis berubah menjadi HURUF KAPITAL */
+            transition: color 0.3s; /* Membuat perubahan warna berlangsung halus selama 0,3 detik */
+        }
+
+        .nav-links a:hover {
+            color: #1a202c; /* Saat panah mouse menyentuh tombol menu, warnanya berubah menjadi hitam pekat */
+        }
+
+        /* Pengaturan Judul Pembuka Paling Atas */
+        header {
+            text-align: center; /* Meratakan semua tulisan pembuka ke tengah layar */
+            padding: 90px 20px 60px; /* Memberi ruang kosong yang luas di atas dan bawah judul */
+        }
+
+        .header-badge {
+            display: inline-block; /* Membuat kotak abu-abu kecil pas mengikuti panjang tulisan "Digital Profile" */
+            font-size: 0.7rem; /* Ukuran huruf kecil */
+            text-transform: uppercase; /* Membuat semua huruf menjadi KAPITAL */
+            letter-spacing: 2.5px; /* Merenggangkan jarak antar huruf */
+            color: #4a5568; /* Warna tulisan */
+            background-color: #edf2f7; /* Warna kotak latar belakang abu-abu muda */
+            padding: 6px 16px; /* Ruang kosong di dalam kotak kecil */
+            border-radius: 20px; /* Melengkungkan ujung kotak hingga berbentuk lonjong seperti kapsul */
+            margin-bottom: 20px; /* Memberi jarak ke tulisan besar di bawahnya */
+            font-weight: 700; /* Menebalkan tulisan */
+        }
+
+        header h1 {
+            font-size: 3.2rem; /* Ukuran judul utama "Personal Archive" yang besar */
+            max-width: 800px; /* Membatasi lebar judul agar tidak kepanjangan ke samping */
+            margin: 0 auto 15px; /* Menaruh judul tepat di tengah layar & memberi jarak bawah */
+            color: #1a202c; /* Warna judul hitam keabu-abuan */
+            font-weight: 600; /* Ketebalan judul */
+            line-height: 1.2; /* Jarak antar baris jika judul turun ke baris kedua */
+        }
+
+        header p {
+            color: #718096; /* Warna tulisan keterangan di bawah judul */
+            letter-spacing: 1.5px; /* Jarak renggang antar huruf */
+            font-size: 0.9rem; /* Ukuran tulisan keterangan */
+            max-width: 500px; /* Membatasi lebar kalimat agar rapi */
+            margin: 0 auto; /* Menaruh kalimat tepat di tengah layar */
+        }
+
+        /* Pengaturan Batas Lebar Isi Halaman */
+        section {
+            padding: 60px 20px; /* Ruang kosong atas-bawah dan kiri-kanan tiap bagian */
+            max-width: 900px; /* Membatasi lebar isi halaman agar tetap rapi di layar komputer yang lebar */
+            margin: 0 auto; /* Menaruh seluruh bagian tepat di tengah layar */
+        }
+
+        /* 1. Pengaturan Kotak Biodata */
+        #biodata {
+            max-width: 850px; /* Lebar maksimal khusus kotak biodata */
+            padding: 20px 20px 60px; /* Ruang kosong di luar kotak putih biodata */
+        }
+
+        .biodata-card-box {
+            background-color: #ffffff; /* Mewarnai kotak biodata menjadi putih bersih */
+            border-radius: 12px; /* Melengkungkan keempat sudut kotak agar tidak lancip */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); /* Memberi efek bayangan tipis di bawah kotak agar terlihat timbul */
+            padding: 50px; /* Ruang kosong di dalam kotak putih agar tulisan tidak mepet pinggir */
+            border: 1px solid #edf2f7; /* Garis bingkai tipis di pinggiran kotak putih */
+        }
+
+        .section-title {
+            text-align: center; /* Meratakan judul bagian ("Biodata Diri", "Hobi", dll) ke tengah */
+            font-size: 2.2rem; /* Ukuran huruf judul bagian */
+            color: #1a202c; /* Warna judul bagian */
+            margin-bottom: 10px; /* Jarak ke garis kecil di bawahnya */
+            font-weight: 600; /* Ketebalan judul */
+        }
+
+        .divider {
+            width: 50px; /* Panjang garis hiasan pendek */
+            height: 1.5px; /* Ketebalan garis hiasan */
+            background-color: #cbd5e0; /* Warna garis hiasan abu-abu */
+            margin: 0 auto 40px; /* Menaruh garis tepat di tengah & memberi jarak ke isi di bawahnya */
+        }
+
+        .biodata-grid {
+            display: grid; /* Menyusun isi biodata menjadi rapi seperti tabel/kolom */
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Otomatis membagi jadi 3 kolom di laptop, dan 1 kolom di HP */
+            gap: 30px; /* Jarak renggang antar kolom biodata */
+        }
+
+        .biodata-item {
+            border-bottom: 1px solid #edf2f7; /* Garis tipis pembatas di bawah setiap data diri */
+            padding-bottom: 15px; /* Jarak antara tulisan dengan garis bawahnya */
+        }
+
+        .biodata-item label {
+            display: block; /* Memastikan judul kecil (seperti "NAMA LENGKAP") berada di atas isinya */
+            font-size: 0.7rem; /* Ukuran tulisan judul kecil */
+            text-transform: uppercase; /* Otomatis menjadi HURUF KAPITAL */
+            letter-spacing: 1.5px; /* Jarak renggang antar huruf */
+            color: #a0aec0; /* Warna tulisan abu-abu pudar */
+            margin-bottom: 8px; /* Jarak ke tulisan isi di bawahnya */
+            font-weight: 700; /* Menebalkan tulisan */
+        }
+
+        .biodata-item span {
+            font-size: 1.05rem; /* Ukuran tulisan isi biodata (seperti "Andhara Dila...") */
+            font-weight: 600; /* Membuat isi biodata sedikit tebal agar jelas dibaca */
+            color: #2d3748; /* Warna tulisan isi biodata */
+        }
+
+        /* 2. Pengaturan Kotak Hobi */
+        #hobi {
+            max-width: 900px; /* Lebar maksimal bagian hobi */
+        }
+
+        .hobi-grid {
+            display: grid; /* Menyusun 3 kotak hobi berjejer rapi */
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Berjejer 3 ke samping di laptop, atau bertumpuk ke bawah di HP */
+            gap: 20px; /* Jarak antar kotak hobi */
+        }
+
+        .hobi-card {
+            background: #ffffff; /* Warna kotak hobi putih */
+            padding: 30px 25px; /* Ruang kosong di dalam kotak hobi */
+            border-radius: 8px; /* Sudut kotak sedikit melengkung */
+            border: 1px solid #e2e8f0; /* Garis bingkai tipis di pinggir kotak */
+            transition: transform 0.3s, box-shadow 0.3s; /* Membuat gerakan kotak terasa mulus selama 0,3 detik */
+        }
+
+        .hobi-card:hover {
+            transform: translateY(-5px); /* Saat disentuh mouse, kotak hobi akan terangkat sedikit ke atas */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); /* Muncul bayangan halus di bawah kotak saat disentuh mouse */
+        }
+
+        .hobi-icon {
+            font-size: 2.2rem; /* Memperbesar ukuran gambar emoji (🎬, 🏃‍♀️, 🏊‍♀️) */
+            margin-bottom: 15px; /* Jarak antara emoji dengan judul hobi di bawahnya */
+        }
+
+        .hobi-card h3 {
+            margin: 0 0 10px 0; /* Memberi jarak bawah antara judul hobi dan penjelasannya */
+            font-size: 1.1rem; /* Ukuran tulisan judul hobi */
+            color: #1a202c; /* Warna judul hobi */
+        }
+
+        .hobi-card p {
+            font-size: 0.85rem; /* Ukuran tulisan penjelasan hobi */
+            color: #718096; /* Warna tulisan penjelasan hobi abu-abu */
+            margin: 0; /* Menghapus jarak kosong berlebih */
+            line-height: 1.5; /* Jarak antar baris tulisan penjelasan */
+        }
+
+        /* 3. Pengaturan Galeri Foto & Video */
+        .galeri-wrapper {
+            background-color: #1a202c; /* Mewarnai latar belakang khusus bagian galeri menjadi gelap (hitam kebiruan) */
+            color: white; /* Mengubah semua tulisan di area galeri menjadi putih */
+            padding: 90px 20px; /* Ruang kosong atas-bawah yang luas di area gelap */
+            margin-top: 40px; /* Jarak pemisah dari bagian hobi di atasnya */
+        }
+
+        .galeri-wrapper .section-title {
+            color: white; /* Mengubah judul "Galeri Gambar" menjadi warna putih */
+        }
+
+        .galeri-grid {
+            display: grid; /* Menyusun bingkai foto berjejer rapi */
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Otomatis menyesuaikan jumlah foto per baris sesuai ukuran layar */
+            gap: 25px; /* Jarak antar bingkai foto */
+            max-width: 900px; /* Lebar maksimal kumpulan foto */
+            margin: 0 auto; /* Menaruh kumpulan foto tepat di tengah layar */
+        }
+
+        .galeri-card {
+            position: relative; /* Menjadi patokan agar tulisan judul foto bisa menempel di bagian bawah foto */
+            border-radius: 8px; /* Sudut bingkai foto melengkung */
+            overflow: hidden; /* Memotong bagian ujung foto yang keluar dari lengkungan bingkai */
+            background-color: #2d3748; /* Warna kotak sementara jika foto dari internet masih loading */
+            height: 230px; /* Mengatur tinggi semua bingkai foto agar seragam */
+        }
+
+        .galeri-card img,
+        .galeri-card video {
+            width: 100%; /* Lebar foto/video memenuhi seluruh kotak bingkai */
+            height: 100%; /* Tinggi foto/video memenuhi seluruh kotak bingkai */
+            object-fit: cover; /* Memotong pinggiran secara otomatis agar tidak terlihat gepeng/tertarik */
+            filter: grayscale(80%); /* Membuat warna agak hitam-putih saat belum disentuh */
+            transition: filter 0.5s, transform 0.5s; /* Efek perubahan warna dan ukuran berlangsung halus selama 0,5 detik */
+            cursor: pointer; /* Mengubah ikon panah mouse menjadi tangan saat diarahkan ke video */
+        }
+
+        .galeri-card:hover img,
+        .galeri-card:hover video {
+            filter: grayscale(0%); /* Saat disentuh mouse, warna asli langsung muncul cerah */
+            transform: scale(1.05); /* Saat disentuh mouse, akan membesar sedikit (efek zoom) */
+        }
+
+        /* KHUSUS LAYAR LAPTOP/PC (3 Kolom): Pindahkan bingkai ke-4 tepat ke kolom tengah */
+        @media (min-width: 860px) {
+            .galeri-card:nth-child(4) {
+                grid-column: 2; /* Memaksa bingkai ke-4 menempati kolom ke-2 (tengah) */
+            }
+        }
+
+        .galeri-info {
+            position: absolute; /* Membuat kotak tulisan menumpuk di atas foto */
+            bottom: 0; /* Menempelkan tulisan tepat di bagian paling bawah foto */
+            left: 0; /* Menempel dari pinggir kiri */
+            right: 0; /* Sampai pinggir kanan */
+            padding: 20px; /* Ruang kosong di sekitar tulisan judul */
+            background: linear-gradient(transparent, rgba(0,0,0,0.85)); /* Efek bayangan hitam memudar ke atas agar tulisan putih jelas terbaca */
+            pointer-events: none; /* Agar tombol video tetap bisa diklik tanpa terhalang lapisan teks */
+        }
+
+        /* KHUSUS VIDEO: Taruh judul video di bagian ATAS agar tidak menutupi tombol Play di bawah */
+        .galeri-info-top {
+            position: absolute; /* Membuat kotak tulisan menumpuk di atas video */
+            top: 0; /* Menempelkan tulisan di bagian paling ATAS video */
+            left: 0; /* Menempel dari pinggir kiri */
+            right: 0; /* Sampai pinggir kanan */
+            padding: 15px 20px; /* Ruang kosong di sekitar tulisan judul */
+            background: linear-gradient(rgba(0,0,0,0.85), transparent); /* Gradasi gelap dari atas memudar ke bawah */
+            pointer-events: none; /* Agar klik mouse langsung tembus ke video di bawahnya */
+        }
+
+        .galeri-info h3,
+        .galeri-info-top h3 {
+            margin: 0; /* Menghapus jarak kosong berlebih */
+            font-size: 1rem; /* Ukuran tulisan judul */
+            color: white; /* Warna tulisan putih */
+            font-weight: 500; /* Ketebalan tulisan sedang */
+        }
+
+        /* Pengaturan Bagian Paling Bawah (Footer) */
+        footer {
+            text-align: center; /* Meratakan tulisan penutup ke tengah */
+            padding: 30px; /* Ruang kosong di atas dan bawah tulisan penutup */
+            background-color: #0f172a; /* Warna latar belakang hitam pekat */
+            color: #64748b; /* Warna tulisan abu-abu redup */
+            font-size: 0.75rem; /* Ukuran tulisan kecil */
+            letter-spacing: 1.5px; /* Jarak renggang antar huruf */
+            text-transform: uppercase; /* Semua huruf otomatis menjadi KAPITAL */
+        }
+    </style> <!-- Akhir dari bagian rias wajah website -->
+</head> <!-- Akhir dari bagian otak website -->
+
+<body> <!-- Mulai bagian "tubuh" website (semua yang tampil dan dilihat pengunjung di layar) -->
+
+    <!-- MENU ATAS -->
+    <nav> <!-- Wadah menu navigasi paling atas -->
+        <div class="logo">Andhara.</div> <!-- Tulisan nama/logo di pojok kiri atas -->
+        <div class="nav-links"> <!-- Kumpulan tombol menu di pojok kanan atas -->
+            <a href="#biodata">Biodata</a> <!-- Tombol yang jika diklik akan menggeser layar ke bagian Biodata -->
+            <a href="#hobi">Hobi</a> <!-- Tombol yang jika diklik akan menggeser layar ke bagian Hobi -->
+            <a href="#gambar">Gambar</a> <!-- Tombol yang jika diklik akan menggeser layar ke bagian Galeri Gambar -->
+        </div>
+    </nav>
+
+    <!-- JUDUL PEMBUKA -->
+    <header> <!-- Bagian perkenalan paling atas -->
+        <div class="header-badge">Digital Profile</div> <!-- Tulisan kecil di dalam kapsul abu-abu -->
+        <h1>Personal Archive</h1> <!-- Judul utama berukuran besar -->
+        <p>Mengenal lebih dekat melalui biodata, hobi, dan galeri aktivitas.</p> <!-- Kalimat sambutan singkat -->
+    </header>
+
+    <!-- 1. BAGIAN BIODATA -->
+    <section id="biodata"> <!-- Penanda area "biodata" agar bisa dituju oleh tombol menu di atas -->
+        <div class="biodata-card-box"> <!-- Kotak putih pembungkus seluruh data diri -->
+            <h2 class="section-title">Biodata Diri</h2> <!-- Judul kotak biodata -->
+            <div class="divider"></div> <!-- Garis pendek hiasan di bawah judul -->
+            
+            <div class="biodata-grid"> <!-- Pengelompokan data diri agar tersusun rapi berkolom -->
+                <div class="biodata-item"> <!-- Kotak data ke-1 -->
+                    <label>Nama Lengkap</label> <!-- Keterangan data -->
+                    <span>Andhara Dila Manggala Putri</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-2 -->
+                    <label>Nama Panggilan</label> <!-- Keterangan data -->
+                    <span>Dila</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-3 -->
+                    <label>Tempat, Tanggal Lahir</label> <!-- Keterangan data -->
+                    <span>Tarjun, 28 Feb 2005</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-4 -->
+                    <label>Jenis Kelamin</label> <!-- Keterangan data -->
+                    <span>Perempuan</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-5 -->
+                    <label>Agama</label> <!-- Keterangan data -->
+                    <span>Islam</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-6 -->
+                    <label>Alamat</label> <!-- Keterangan data -->
+                    <span>Karang Anyar 1</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-7 -->
+                    <label>Pendidikan</label> <!-- Keterangan data -->
+                    <span>SMK Telkom Banjarbaru</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-8 -->
+                    <label>Email</label> <!-- Keterangan data -->
+                    <span>andharadila28@gmail.com</span> <!-- Isi data -->
+                </div>
+                <div class="biodata-item"> <!-- Kotak data ke-9 -->
+                    <label>Telepon</label> <!-- Keterangan data -->
+                    <span>081348191475</span> <!-- Isi data -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. BAGIAN HOBI -->
+    <section id="hobi"> <!-- Penanda area "hobi" agar bisa dituju oleh tombol menu di atas -->
+        <h2 class="section-title">Hobi & Minat</h2> <!-- Judul bagian hobi -->
+        <div class="divider"></div> <!-- Garis pendek hiasan di bawah judul -->
+
+        <div class="hobi-grid"> <!-- Pengelompokan 3 kartu hobi agar berjejer rapi -->
+            <div class="hobi-card"> <!-- Kartu hobi pertama -->
+                <div class="hobi-icon">🎬</div> <!-- Gambar emoji rol film -->
+                <h3>Menonton Film</h3> <!-- Nama hobi -->
+                <p>Menikmati berbagai genre film dan serial menarik di waktu senggang.</p> <!-- Penjelasan singkat hobi -->
+            </div>
+            <div class="hobi-card"> <!-- Kartu hobi kedua -->
+                <div class="hobi-icon">🏃‍♀️</div> <!-- Gambar emoji orang berlari -->
+                <h3>Joging</h3> <!-- Nama hobi -->
+                <p>Menjaga kesehatan fisik dan kebugaran tubuh lewat lari santai.</p> <!-- Penjelasan singkat hobi -->
+            </div>
+            <div class="hobi-card"> <!-- Kartu hobi ketiga -->
+                <div class="hobi-icon">🏊‍♀️</div> <!-- Gambar emoji orang berenang -->
+                <h3>Berenang</h3> <!-- Nama hobi -->
+                <p>Olahraga air yang menyegarkan sekaligus melatih ketahanan tubuh.</p> <!-- Penjelasan singkat hobi -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BAGIAN GALERI FOTO & VIDEO -->
+    <div class="galeri-wrapper" id="gambar"> <!-- Area berlatar gelap dengan penanda "gambar" untuk tombol menu -->
+        <h2 class="section-title">Galeri Gambar</h2> <!-- Judul bagian galeri -->
+        <div class="divider"></div> <!-- Garis pendek hiasan di bawah judul -->
+
+        <div class="galeri-grid"> <!-- Pengelompokan 3 foto dan 1 video agar tersusun rapi -->
+            <div class="galeri-card"> <!-- Bingkai foto ke-1 -->
+                <img src="FotoDepanKost.jpeg" alt="Foto Depan Kost"> <!-- alamat link gambar dari folder lokal -->
+                <div class="galeri-info"> <!-- Kotak tulisan di bagian bawah foto -->
+                    <h3>Foto Depan Kost</h3> <!-- Judul foto -->
+                </div>
+            </div>
+            <div class="galeri-card"> <!-- Bingkai foto ke-2 -->
+                <img src="FotoKostDalam.jpeg" alt="Foto Dalam Kost"> <!-- alamat link gambar dari folder lokal -->
+                <div class="galeri-info"> <!-- Kotak tulisan di bagian bawah foto -->
+                    <h3>Foto Dalam Kost</h3> <!-- Judul foto -->
+                </div>
+            </div>
+            <div class="galeri-card"> <!-- Bingkai foto ke-3 -->
+                <img src="FotoKostDalam1.jpeg" alt="Foto Dalam Kost 1"> <!-- alamat link gambar dari folder lokal -->
+                <div class="galeri-info"> <!-- Kotak tulisan di bagian bawah foto -->
+                    <h3>Foto Dalam Kost</h3> <!-- Judul foto -->
+                </div>
+            </div>
+            <div class="galeri-card"> <!-- Bingkai ke-4 (Video di Tengah) -->
+                <!-- controls: memunculkan tombol Play/Pause | onmouseover: putar saat mouse diarahkan | onmouseout: berhenti saat mouse menjauh -->
+                <video controls muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="VideoKost.mp4" type="video/mp4"> <!-- alamat link video dari folder lokal -->
+                </video>
+                <div class="galeri-info-top"> <!-- Judul ditaruh di bagian ATAS agar tidak menghalangi tombol Play di bawah -->
+                    <h3>Video Kost</h3> <!-- Judul video -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BAGIAN PENUTUP PALING BAWAH -->
+    <footer> <!-- Catatan kaki di ujung paling bawah halaman -->
+        &copy; Andhara Dila Manggala Putri <!-- Tulisan hak cipta (kode &copy; akan otomatis berubah menjadi simbol ©) -->
+    </footer>
+
+</body> <!-- Akhir dari bagian tubuh website -->
+</html> <!-- Akhir dari keseluruhan file website -->
