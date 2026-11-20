@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumpulan Tugas | Andhara Dila Manggala Putri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f3e98b 0%, #c8ecd9 50%, #a8e0c9 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px 15px;
+        }
+
+        /* Wadah kotak putih utama di tengah layar */
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.94);
+            width: 100%;
+            max-width: 440px;
+            border-radius: 30px;
+            padding: 45px 30px 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        /* Ikon bintang hiasan di paling atas */
+        .top-icon {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            filter: drop-shadow(0 4px 6px rgba(163, 217, 119, 0.4));
+        }
+
+        /* Nama Mahasiswa */
+        .student-name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1f5e3b;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        /* Nama Mata Kuliah */
+        .course-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #2d4739;
+            margin-bottom: 8px;
+        }
+
+        /* Program Studi & Universitas */
+        .university-info {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #d4a017;
+            line-height: 1.4;
+            margin-bottom: 35px;
+        }
+
+        /* Daftar Kartu Tugas */
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        /* Gaya dasar setiap kotak tombol tugas */
+        .task-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 30px 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .task-icon {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+        }
+
+        .task-number {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .task-desc {
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        /* Warna Khusus Kartu Tugas 1 (Gradasi Hijau Mint) */
+        .card-1 {
+            background: linear-gradient(135deg, #b8e6d5 0%, #c8eda8 100%);
+            color: #1b4d32;
+        }
+
+        /* Warna Khusus Kartu Tugas 2 (Gradasi Kuning Emas) */
+        .card-2 {
+            background: linear-gradient(135deg, #f7d648 0%, #d4eb96 100%);
+            color: #1f4e2c;
+        }
+
+        /* Warna Khusus Kartu Tugas 3 (Putih Bersih dengan Aksen Biru) */
+        .card-3 {
+            background: #ffffff;
+            border: 1px solid #edf2f7;
+            color: #1d4ed8;
+        }
+        .card-3 .task-desc {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Ikon Atas -->
+        <div class="top-icon">🌟</div>
+
+        <!-- Identitas -->
+        <h1 class="student-name">Andhara Dila<br>Manggala Putri</h1>
+        <p class="course-title">Sistem Informasi Manajemen</p>
+        <p class="university-info">Sosial Ekonomi Perikanan<br>Universitas Lambung Mangkurat</p>
+
+        <!-- Daftar Tombol Tugas -->
+        <div class="task-list">
+            
+            <!-- TUGAS 1: Otomatis membuka file tugas1.html -->
+            <a href="tugas1.html" class="task-card card-1">
+                <div class="task-icon">📊</div>
+                <div class="task-number">TUGAS 1</div>
+                <div class="task-desc">Biodata Diri</div>
+            </a>
+
+            <!-- TUGAS 2: Otomatis membuka file tugas2.html -->
+            <a href="tugas2.html" class="task-card card-2">
+                <div class="task-icon">🏦</div>
+                <div class="task-number">TUGAS 2</div>
+                <div class="task-desc">Formulir Transaksi</div>
+            </a>
+
+            <!-- TUGAS 3: Otomatis membuka file tugas3.html -->
+            <a href="tugas3.html" class="task-card card-3">
+                <div class="task-icon">📋</div>
+                <div class="task-number">TUGAS 3</div>
+                <div class="task-desc">Google Form</div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
