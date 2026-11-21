@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kumpulan Tugas | Andhara Dila Manggala Putri</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio & Tugas | Andhara Dila Manggala Putri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -14,161 +14,303 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #f3e98b 0%, #c8ecd9 50%, #a8e0c9 100%);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 30px 15px;
-        }
-
-        /* Wadah kotak putih utama di tengah layar */
-        .main-container {
-            background-color: rgba(255, 255, 255, 0.94);
-            width: 100%;
-            max-width: 440px;
-            border-radius: 30px;
-            padding: 45px 30px 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        /* Ikon bintang hiasan di paling atas */
-        .top-icon {
-            font-size: 3.2rem;
-            margin-bottom: 15px;
-            display: inline-block;
-            filter: drop-shadow(0 4px 6px rgba(163, 217, 119, 0.4));
-        }
-
-        /* Nama Mahasiswa */
-        .student-name {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #1f5e3b;
-            line-height: 1.25;
-            margin-bottom: 12px;
-        }
-
-        /* Nama Mata Kuliah */
-        .course-title {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #2d4739;
-            margin-bottom: 8px;
-        }
-
-        /* Program Studi & Universitas */
-        .university-info {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #d4a017;
-            line-height: 1.4;
-            margin-bottom: 35px;
-        }
-
-        /* Daftar Kartu Tugas */
-        .task-list {
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-        }
-
-        /* Gaya dasar setiap kotak tombol tugas */
-        .task-card {
+            background-color: #0b0f19;
+            color: #f8fafc;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            padding: 30px 20px;
-            border-radius: 24px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        .task-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+        /* Efek Cahaya Ambient di Latar Belakang */
+        .glow-1 {
+            position: fixed;
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
         }
 
-        .task-icon {
-            font-size: 2.8rem;
-            margin-bottom: 12px;
+        .glow-2 {
+            position: fixed;
+            bottom: -120px;
+            right: -80px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
         }
 
-        .task-number {
-            font-size: 1.35rem;
+        /* Wadah Utama */
+        .wrapper {
+            width: 100%;
+            max-width: 820px;
+            z-index: 1;
+        }
+
+        /* Bagian Profil Atas (Hero Card) */
+        .profile-banner {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 45px 35px;
+            text-align: center;
+            margin-bottom: 28px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #facc15;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 18px;
+            border-radius: 50px;
+            margin-bottom: 22px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background-color: #facc15;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #facc15;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 14px;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #94a3b8;
+            font-weight: 500;
             margin-bottom: 6px;
         }
 
-        .task-desc {
-            font-size: 0.95rem;
-            font-weight: 400;
+        .campus {
+            font-size: 0.88rem;
+            color: #64748b;
+            font-weight: 500;
         }
 
-        /* Warna Khusus Kartu Tugas 1 (Gradasi Hijau Mint) */
-        .card-1 {
-            background: linear-gradient(135deg, #b8e6d5 0%, #c8eda8 100%);
-            color: #1b4d32;
+        /* Susunan Grid Kartu Tugas (Bento Style) */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        /* Warna Khusus Kartu Tugas 2 (Gradasi Kuning Emas) */
-        .card-2 {
-            background: linear-gradient(135deg, #f7d648 0%, #d4eb96 100%);
-            color: #1f4e2c;
+        .card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 30px 26px;
+            text-decoration: none;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
         }
 
-        /* Warna Khusus Kartu Tugas 3 (Putih Bersih dengan Aksen Biru) */
-        .card-3 {
-            background: #ffffff;
-            border: 1px solid #edf2f7;
-            color: #1d4ed8;
+        /* Garis cahaya di atas kartu saat disentuh */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.35s ease;
         }
-        .card-3 .task-desc {
-            color: #2563eb;
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .card-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #94a3b8;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 5px 12px;
+            border-radius: 8px;
+        }
+
+        .arrow-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .arrow-btn {
+            background: #facc15;
+            color: #0b0f19;
+            transform: rotate(45deg);
+        }
+
+        .card-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .card-body p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* Kartu 1 dibuat lebih menonjol dengan aksen emas lembut */
+        .card-featured {
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        .card-featured .card-tag {
+            background: rgba(250, 204, 21, 0.15);
+            color: #fde047;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 36px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #475569;
+            letter-spacing: 1px;
+        }
+
+        /* Responsif untuk layar HP */
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .name {
+                font-size: 2rem;
+            }
+            .card {
+                min-height: 170px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-container">
-        <!-- Ikon Atas -->
-        <div class="top-icon">🌟</div>
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
 
-        <!-- Identitas -->
-        <h1 class="student-name">Andhara Dila<br>Manggala Putri</h1>
-        <p class="course-title">Sistem Informasi Manajemen</p>
-        <p class="university-info">Sosial Ekonomi Perikanan<br>Universitas Lambung Mangkurat</p>
+    <div class="wrapper">
+        <!-- Kartu Identitas Atas -->
+        <header class="profile-banner">
+            <div class="badge">
+                <span class="dot"></span>
+                Digital Archive & Assignments
+            </div>
+            <h1 class="name">Andhara Dila Manggala Putri</h1>
+            <p class="subtitle">Sistem Informasi Manajemen</p>
+            <p class="campus">Sosial Ekonomi Perikanan • Universitas Lambung Mangkurat</p>
+        </header>
 
-        <!-- Daftar Tombol Tugas -->
-        <div class="task-list">
+        <!-- Daftar Kartu Tugas (3 Kolom di Laptop, 1 Kolom di HP) -->
+        <main class="bento-grid">
             
-            <!-- TUGAS 1: Otomatis membuka file tugas1.html -->
-            <a href="tugas1.html" class="task-card card-1">
-                <div class="task-icon">📊</div>
-                <div class="task-number">TUGAS 1</div>
-                <div class="task-desc">Biodata Diri</div>
+            <!-- TUGAS 1 -->
+            <a href="tugas1.html" class="card card-featured">
+                <div class="card-header">
+                    <span class="card-tag">Tugas 01</span>
+                    <div class="arrow-btn">↗</div>
+                </div>
+                <div class="card-body">
+                    <h2>Biodata Diri</h2>
+                    <p>Profil pribadi, hobi, dan galeri dokumentasi aktivitas.</p>
+                </div>
             </a>
 
-            <!-- TUGAS 2: Otomatis membuka file tugas2.html -->
-            <a href="tugas2.html" class="task-card card-2">
-                <div class="task-icon">🏦</div>
-                <div class="task-number">TUGAS 2</div>
-                <div class="task-desc">Formulir Transaksi</div>
+            <!-- TUGAS 2 -->
+            <a href="tugas2.html" class="card">
+                <div class="card-header">
+                    <span class="card-tag">Tugas 02</span>
+                    <div class="arrow-btn">↗</div>
+                </div>
+                <div class="card-body">
+                    <h2>Formulir Transaksi</h2>
+                    <p>Halaman input dan pengelolaan data transaksi.</p>
+                </div>
             </a>
 
-            <!-- TUGAS 3: Otomatis membuka file tugas3.html -->
-            <a href="tugas3.html" class="task-card card-3">
-                <div class="task-icon">📋</div>
-                <div class="task-number">TUGAS 3</div>
-                <div class="task-desc">Google Form</div>
+            <!-- TUGAS 3 -->
+            <a href="tugas3.html" class="card">
+                <div class="card-header">
+                    <span class="card-tag">Tugas 03</span>
+                    <div class="arrow-btn">↗</div>
+                </div>
+                <div class="card-body">
+                    <h2>Google Form</h2>
+                    <p>Formulir survei dan pengumpulan data digital.</p>
+                </div>
             </a>
 
-        </div>
+        </main>
+
+        <footer>
+            &copy; 2026 Andhara Dila Manggala Putri — All Rights Reserved
+        </footer>
     </div>
 
 </body>
