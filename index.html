@@ -65,7 +65,7 @@
             border-radius: 28px;
             padding: 45px 35px;
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
@@ -118,10 +118,10 @@
             font-weight: 500;
         }
 
-        /* Susunan Grid Kartu Tugas (Bento Style) */
+        /* Susunan Grid 2x2 untuk 4 Kartu Tugas */
         .bento-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
@@ -130,13 +130,13 @@
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
-            padding: 30px 26px;
+            padding: 28px 26px;
             text-decoration: none;
             color: #f8fafc;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 220px;
+            min-height: 195px;
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             overflow: hidden;
         }
@@ -169,7 +169,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .card-tag {
@@ -216,7 +216,7 @@
             line-height: 1.5;
         }
 
-        /* Kartu 1 dibuat lebih menonjol dengan aksen emas lembut */
+        /* Kartu 1 (Aksen Emas Lembut) */
         .card-featured {
             background: linear-gradient(145deg, rgba(212, 175, 55, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
             border-color: rgba(212, 175, 55, 0.25);
@@ -225,6 +225,17 @@
         .card-featured .card-tag {
             background: rgba(250, 204, 21, 0.15);
             color: #fde047;
+        }
+
+        /* Kartu 4 (Aksen Biru Lembut untuk Tugas Kelompok) */
+        .card-group {
+            background: linear-gradient(145deg, rgba(56, 189, 248, 0.10) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border-color: rgba(56, 189, 248, 0.22);
+        }
+
+        .card-group .card-tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #7dd3fc;
         }
 
         /* Footer */
@@ -237,7 +248,7 @@
         }
 
         /* Responsif untuk layar HP */
-        @media (max-width: 768px) {
+        @media (max-width: 680px) {
             .bento-grid {
                 grid-template-columns: 1fr;
             }
@@ -245,7 +256,7 @@
                 font-size: 2rem;
             }
             .card {
-                min-height: 170px;
+                min-height: 165px;
             }
         }
     </style>
@@ -267,7 +278,7 @@
             <p class="campus">Sosial Ekonomi Perikanan • Universitas Lambung Mangkurat</p>
         </header>
 
-        <!-- Daftar Kartu Tugas (3 Kolom di Laptop, 1 Kolom di HP) -->
+        <!-- Daftar 4 Kartu Tugas (2x2 di Laptop, 1 Kolom di HP) -->
         <main class="bento-grid">
             
             <!-- TUGAS 1 -->
@@ -303,6 +314,18 @@
                 <div class="card-body">
                     <h2>Google Form</h2>
                     <p>Formulir survei dan pengumpulan data digital.</p>
+                </div>
+            </a>
+
+            <!-- TUGAS 4 -->
+            <a href="tugas4.html" class="card card-group">
+                <div class="card-header">
+                    <span class="card-tag">Tugas 04</span>
+                    <div class="arrow-btn">↗</div>
+                </div>
+                <div class="card-body">
+                    <h2>Tugas Kelompok</h2>
+                    <p>Proyek kolaborasi dan hasil kerja kelompok mata kuliah.</p>
                 </div>
             </a>
 
